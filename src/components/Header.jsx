@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import Button from './ui/Button';
+import DownloadIcon from '../assets/icons/DownloadIcon.svg';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -26,11 +27,14 @@ const Header = () => {
 
         {/* Botones */}
         <div className="flex space-x-4">
+          <Button>
+              <div className="flex items-center justify-center gap-2">
+                Resume
+                <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
+              </div>
+          </Button>
           <button className="px-4 py-2 border rounded-md hover:bg-gray-100">
             ES/EN
-          </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-            Download CV
           </button>
         </div>
       </div>
@@ -70,11 +74,14 @@ const Header = () => {
             <a href="#contact" className="hover:text-blue-600">Contact</a>
           </nav>
           <div className="flex flex-col space-y-2 px-6 mt-4">
+            <Button>
+              <div className="flex items-center justify-center gap-2">
+                Resume
+                <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
+              </div>
+            </Button>
             <button className="px-4 py-2 border rounded-md hover:bg-gray-100">
               ES/EN
-            </button>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-              Download CV
             </button>
           </div>
         </div>
