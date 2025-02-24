@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-6 py-4 bg-white shadow-md">
+    <header className="w-full px-6 py-4 bg-white">
       {/* Versión Desktop */}
       <div className="hidden md:flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
