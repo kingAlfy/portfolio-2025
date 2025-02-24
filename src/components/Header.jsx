@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Menú móvil desplegable */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md py-4">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
           <nav className="flex flex-col space-y-4 px-6">
             <a href="#skills" className="hover:underline">Skills</a>
             <a href="#experience" className="hover:underline">Experience</a>
