@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="w-full px-6 py-4">
       {/* Versión Desktop */}
-      <div className="hidden md:flex justify-between items-center max-w-7xl mx-auto">
+      <div className="hidden lg:flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <a href="/" className="text-xl font-bold">
           ALFONSORAVELOGIL.COM
@@ -40,7 +40,7 @@ const Header = () => {
       </div>
 
       {/* Versión Móvil */}
-      <div className="md:hidden flex justify-between items-center">
+      <div className="lg:hidden flex justify-between items-center">
         <div className="text-xl font-bold">
           ALFONSORAVELOGIL.COM
         </div>
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Menú móvil desplegable */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
+        <div className="lg:hidden absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
           <nav className="flex flex-col space-y-4 px-6">
             <a href="#skills" className="hover:underline">Skills</a>
             <a href="#experience" className="hover:underline">Experience</a>
