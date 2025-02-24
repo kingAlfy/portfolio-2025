@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Button from './ui/Button';
 import DownloadIcon from '../assets/icons/DownloadIcon.svg';
+import IdiomButton from './ui/IdiomButton';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -33,9 +35,7 @@ const Header = () => {
                 <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
               </div>
           </Button>
-          <button className="px-4 py-2 border rounded-md hover:bg-gray-100">
-            ES/EN
-          </button>
+          <IdiomButton />
         </div>
       </div>
 
@@ -80,9 +80,7 @@ const Header = () => {
                 <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
               </div>
             </Button>
-            <button className="px-4 py-2 border rounded-md hover:bg-gray-100">
-              ES/EN
-            </button>
+            <IdiomButton />
           </div>
         </div>
       )}
