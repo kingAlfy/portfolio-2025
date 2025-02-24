@@ -13,5 +13,7 @@
  @theme {
   
     --font-sora: "Sora";
-  
+    --color-primary: #F3F3F3;
+    --color-secondary: #000;
+    --color-terciary: #fff;  
 }
