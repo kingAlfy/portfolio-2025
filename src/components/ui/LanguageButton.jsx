@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useClientLanguage from "../../hooks/useClientLanguage";
 
-const IdiomButton = () => {
+const LanguageButton = () => {
 
     const { changeLanguage, language } = useClientLanguage();
 
@@ -21,4 +21,4 @@ const IdiomButton = () => {
     );  
 };
 
-export default IdiomButton;
+export default LanguageButton;
