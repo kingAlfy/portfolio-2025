@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from './ui/Button';
 import DownloadIcon from '../assets/icons/DownloadIcon.svg';
 import LanguageButton from './ui/LanguageButton';
+import NavElement from './ui/NavElement';
+import { useClientLanguage } from '../contexts/ClientLanguageContext';
+import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { resumeData, loading } = useLoadJsonDB();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,15 +25,14 @@ const Header = () => {
       <div className="hidden lg:flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <a href="/" className="text-xl font-bold">
-          ALFONSORAVELOGIL.COM
+          {resumeData.webSiteInfo.brandingTitle}
         </a>
 
         {/* Navegación */}
         <nav className="space-x-6">
-          <a href="#skills" className="hover:underline">Skills</a>
-          <a href="#experience" className="hover:underline">Experience</a>
-          <a href="#about" className="hover:underline">About Me</a>
-          <a href="#contact" className="hover:underline">Contact</a>
+          {resumeData.webSiteInfo.navOptions.map((option) => (
+            <NavElement key={option.id} text={option.text} href={option.href} />
+          ))}
         </nav>
 
         {/* Botones */}
@@ -42,7 +50,7 @@ const Header = () => {
       {/* Versión Móvil */}
       <div className="lg:hidden flex justify-between items-center">
         <div className="text-xl font-bold">
-          ALFONSORAVELOGIL.COM
+          {resumeData.webSiteInfo.brandingTitle}
         </div>
         <button 
           onClick={toggleMenu}
@@ -68,10 +76,9 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
           <nav className="flex flex-col space-y-4 px-6">
-            <a href="#skills" className="hover:underline">Skills</a>
-            <a href="#experience" className="hover:underline">Experience</a>
-            <a href="#about" className="hover:underline">About Me</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+            {resumeData.webSiteInfo.navOptions.map((option) => (
+              <NavElement key={option.id} text={option.text} href={option.href} />
+            ))}
           </nav>
           <div className="flex flex-col space-y-2 px-6 mt-4">
             <Button>
