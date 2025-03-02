@@ -6,8 +6,6 @@ const useClientLanguage = () => {
 
     const getInitialLanguage = () => {
         useEffect(() => {
-
-            console.log("useClientLanguage");
     
             // Try to get the language from the cookie
             const cookieLanguage = document.cookie

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useClientLanguage from "../../hooks/useClientLanguage";
 
 const LanguageButton = () => {
