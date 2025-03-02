@@ -1,14 +1,16 @@
 import Header from './components/Header';
-//import { JsonDBProvider } from './contexts/JsonDBContext';
 import { ClientLanguageProvider } from './contexts/ClientLanguageContext';
+import { LoadJsonDBProvider, useLoadJsonDB } from './contexts/LoadJsonDBContext';
 
 function App() {
 
   return (
     <ClientLanguageProvider>
-      <>
-        <Header />
-      </>
+      <LoadJsonDBProvider>
+        <>
+          <Header />
+        </>
+      </LoadJsonDBProvider>
     </ClientLanguageProvider>
   )
 }

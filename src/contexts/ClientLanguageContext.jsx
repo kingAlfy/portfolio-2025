@@ -3,12 +3,12 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ClientLanguageContext = createContext();
 
 export const ClientLanguageProvider = ({ children }) => {
-  const [ resumeData, setResumeData ] = useState(null);
-  const [language, setLanguage] = useState(null);
-  
+
+  const [language, setLanguage] = useState('ES');
+
   useEffect(() => {
       const getInitialLanguage = () => {
-          console.log("getInitialLanguage");
+
           // Try to get the language from the cookie
           const cookieLanguage = document.cookie
               .split('; ')
@@ -35,23 +35,6 @@ export const ClientLanguageProvider = ({ children }) => {
       
   }, []);
 
-  useEffect(() => {
-
-    if (!language) return;
-    
-    const loadResumeData = async () => {
-      try {
-        const data = await import(`../utils/resume${language}.json`);
-        console.log(data.default);
-        setResumeData(data.default);
-      } catch (error) {
-        console.error('Error cargando datos del CV:', error);
-      }
-    };
-
-    loadResumeData();
-  }, [language]);
-
   const setCookieLanguage = (language) => {
     document.cookie = `king-language=${language}; path=/; max-age=31536000`; // 1 year
   };
@@ -62,7 +45,6 @@ export const ClientLanguageProvider = ({ children }) => {
   };
 
   const value = {
-    resumeData,
     language,
     changeLanguage
   };
