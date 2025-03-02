@@ -1,11 +1,37 @@
 {
     "webSiteInfo": {
-        "title": "DevOps Engineer | Alfonso Ravelo Gil",
+        "brandingTitle": "ALFONSORAVELOGIL.COM",
         "description": "DevOps Engineer | Alfonso Ravelo Gil",
         "keywords": "Alfonso Ravelo Gil, Alfonso Ravelo, Alfonso, Ravelo, Gil, Software Engineer, DevOps Engineer, Platform Engineer, Support Engineer",
         "author": "Alfonso Ravelo Gil",
-        "nav-options": [ "Inicio", "Sobre mí", "Educación", "Experiencia", "Habilidades", "Contacto" ],
-        "social-links": [
+        "navOptions": [ 
+            {
+                "id": "skills",
+                "text": "Habilidades",
+                "href": "#skills"
+            },
+            {
+                "id": "experience", 
+                "text": "Experiencia",
+                "href": "#experience"
+            },
+            {
+                "id": "about-me",
+                "text": "Sobre mí",
+                "href": "#about-me"
+            },
+            {
+                "id": "education",
+                "text": "Educación", 
+                "href": "#education"
+            },
+            {
+                "id": "contact",
+                "text": "Contacto",
+                "href": "#contact"
+            }
+        ],
+        "socialLinks": [
             {
                 "name": "GitHub",
                 "icon": "../assets/icons/github.svg",
