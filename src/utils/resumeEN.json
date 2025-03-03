@@ -1,0 +1,92 @@
+{
+    "webSiteInfo": {
+        "brandingTitle": "ALFONSORAVELOGIL.COM",
+        "description": "DevOps Engineer | Alfonso Ravelo Gil",
+        "keywords": "Alfonso Ravelo Gil, Alfonso Ravelo, Alfonso, Ravelo, Gil, Software Engineer, DevOps Engineer, Platform Engineer, Support Engineer",
+        "author": "Alfonso Ravelo Gil",
+        "webUrl": "https://alfonsoravelogil.com",
+        "navOptions": [ 
+            {
+                "id": "skills",
+                "text": "Skills",
+                "href": "#skills"
+            },
+            {
+                "id": "experience",
+                "text": "Experience",
+                "href": "#experience"
+            },
+            {
+                "id": "about-me",
+                "text": "About Me",
+                "href": "#about-me"
+            },
+            {
+                "id": "education",
+                "text": "Education",
+                "href": "#education"
+            },
+            {
+                "id": "contact",
+                "text": "Contact",
+                "href": "#contact"
+            }
+        ],
+        "downloadButton": {
+            "text": "Resume",
+            "url": "https://alfonsoravelogil.com/cv/cv_en.pdf"
+        },
+        "socialLinks": [
+            {
+                "name": "GitHub",
+                "icon": "../assets/icons/github.svg",
+                "url": "https://github.com/al2367"
+            },
+            {
+                "name": "LinkedIn",
+                "icon": "../assets/icons/linkedin.svg",
+                "url": "https://www.linkedin.com/in/alfonso-ravelo-gil"
+            }
+        ]
+    },
+    "resume": {
+        "name": "Alfonso Ravelo Gil",
+        "email": "al2367.arg@gmail.com",
+        "address": "Valladolid, Spain",
+        "currentPosition": "DevOps Engineer"
+    },
+    "education": [
+        {
+            "school": "IES Julián Marías",
+            "degree": "Associate Degree in Application WebDevelopment"
+        },
+        {
+            "school": "IES Galileo",
+            "degree": "Associate Degree in Microcomputer Systems and Networks"
+        },
+        {
+            "school": "Microsoft",
+            "degree": "Azure Fundamentals",
+            "type": "Certification",
+            "url": "https://www.credly.com/badges/190dfc14-a96b-4baa-88f2-59b77a42bd43/linked_in_profile"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Astibot",
+            "position": "Software Engineer",
+            "description": "Desarrollo de aplicaciones web a medida para clientes públicos.",
+            "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
+            "startDate": "2020-01-01",
+            "endDate": "2024-01-01"
+        },
+        {
+            "company": "DivisaIT",
+            "position": "DevOps Engineer | Platform Engineer | Support Engineer",
+            "description": "Despliegue de aplicaciones web, mantenimiento, soporte técnico, etc. de servidores de la empresa y aquellos en los que se aloja el producto Proxia",
+            "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
+            "startDate": "2024-06-06",
+            "endDate": "Currently"
+        }
+    ]
+}

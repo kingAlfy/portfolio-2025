@@ -1,9 +1,8 @@
-import useClientLanguage from "../../hooks/useClientLanguage";
+import { useClientLanguage } from "../../contexts/ClientLanguageContext";
 
 const LanguageButton = () => {
 
     const { changeLanguage, language } = useClientLanguage();
-
 
     return (
         <button className="px-4 py-2 h-[40px]" onClick={() => changeLanguage()}>
