@@ -28,7 +28,7 @@ const Header = () => {
         </a>
 
         {/* Navegación */}
-        <nav className="space-x-6">
+        <nav className="space-x-6 flex items-center">
           {resumeData.webSiteInfo.navOptions.map((option) => (
             <NavElement key={option.id} text={option.text} href={option.href} />
           ))}
