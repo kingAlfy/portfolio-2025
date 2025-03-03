@@ -31,6 +31,10 @@
                 "href": "#contact"
             }
         ],
+        "downloadButton": {
+            "text": "Descargar CV",
+            "url": "https://alfonsoravelogil.com/cv/cv_es.pdf"
+        },
         "socialLinks": [
             {
                 "name": "GitHub",

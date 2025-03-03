@@ -32,6 +32,10 @@
                 "href": "#contact"
             }
         ],
+        "downloadButton": {
+            "text": "Resume",
+            "url": "https://alfonsoravelogil.com/cv/cv_en.pdf"
+        },
         "socialLinks": [
             {
                 "name": "GitHub",
