@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import Button from './ui/Button';
 import DownloadIcon from '../assets/icons/DownloadIcon.svg';
+import Button from './ui/Button';
 import LanguageButton from './ui/LanguageButton';
 import NavElement from './ui/NavElement';
-import { useClientLanguage } from '../contexts/ClientLanguageContext';
 import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 
 const Header = () => {
@@ -39,7 +38,7 @@ const Header = () => {
         <div className="flex space-x-4">
           <Button>
               <div className="flex items-center justify-center gap-2">
-                Resume
+                {resumeData.webSiteInfo.downloadButton.text}
                 <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
               </div>
           </Button>
@@ -83,7 +82,7 @@ const Header = () => {
           <div className="flex flex-col space-y-2 px-6 mt-4">
             <Button>
               <div className="flex items-center justify-center gap-2">
-                Resume
+                {resumeData.webSiteInfo.downloadButton.text}
                 <img src={DownloadIcon} alt="Download icon to download the resume" className="w-4 h-4" />
               </div>
             </Button>
