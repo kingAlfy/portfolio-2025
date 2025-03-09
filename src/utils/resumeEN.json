@@ -39,12 +39,12 @@
         "socialLinks": [
             {
                 "name": "GitHub",
-                "icon": "../assets/icons/github.svg",
+                "icon": "/src/assets/icons/github.svg",
                 "url": "https://github.com/al2367"
             },
             {
                 "name": "LinkedIn",
-                "icon": "../assets/icons/linkedin.svg",
+                "icon": "/src/assets/icons/linkedin.svg",
                 "url": "https://www.linkedin.com/in/alfonso-ravelo-gil"
             }
         ]
@@ -54,6 +54,10 @@
         "email": "al2367.arg@gmail.com",
         "address": "Valladolid, Spain",
         "currentPosition": "DevOps Engineer"
+    },
+    "main": {
+        "title": "Hello, I’am Alfonso Ravelo, Cloud Engineer<br>Based in Spain",
+        "description": "DevOps Engineer with experience in web application deployment, server maintenance, and process automation. Specializing in technologies like Docker, Git, CI/CD, and monitoring with Prometheus and Grafana. Always seeking to improve and learn new technologies to optimize processes."
     },
     "education": [
         {
