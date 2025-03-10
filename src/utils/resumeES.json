@@ -52,11 +52,11 @@
         "name": "Alfonso Ravelo Gil",
         "email": "al2367.arg@gmail.com",
         "address": "Valladolid, Spain",
-        "currentPosition": "DevOps Engineer"
+        "currentPosition": ["DevOps", "Engineer"]
     },
     "main": {
-        "title": "Hello, I’am Alfonso Ravelo, Cloud Engineer<br>Based in Spain",
-        "description": "DevOps Engineer with experience in web application deployment, server maintenance, and process automation. Specializing in technologies like Docker, Git, CI/CD, and monitoring with Prometheus and Grafana. Always seeking to improve and learn new technologies to optimize processes."
+        "greeting": "¡Hola!, Soy",
+        "description": "DevOps Engineer con experiencia en despliegue de aplicaciones web, mantenimiento de servidores y automatización de procesos. Especializando en tecnologías como Docker, Git, CI/CD y monitoreo con Prometheus y Grafana. Siempre buscando mejorar y aprender nuevas tecnologías para optimizar procesos."
     },
     "education": [
         {
