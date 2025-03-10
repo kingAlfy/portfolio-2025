@@ -10,18 +10,18 @@ const Main = () => {
         return <div>Loading...</div>;
     }
 
-    console.log(resumeData);
+    console.log(resumeData.resume.currentPosition);
 
     return (
-        <main className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <main className="container mx-auto px-6 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
 		        <div className="flex flex-col space-y-6">
                     <header className="text-3xl font-regular leading-13">
-                        Hello, I' am <span className="font-extrabold">Alfonso,</span>
+                        {resumeData.main.greeting} <span className="font-extrabold">{resumeData.resume.name.split(' ')[0]}.</span>
                         <br />
-                        <span className="font-extrabold">Cloud</span> Engineer
+                        <span className="font-extrabold">{resumeData.resume.currentPosition[0]}</span> {resumeData.resume.currentPosition[1]}
                         <br />
-                        Based in <span className="font-extrabold">Spain</span>
+                        {resumeData.main.basedIn} <span className="font-extrabold">{resumeData.main.basedIn && resumeData.resume.address.split(',')[1]+"."}</span>
                     </header>
                     <section>
                         <p className="text-md">
