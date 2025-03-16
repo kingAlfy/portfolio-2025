@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import { ClientLanguageProvider } from './contexts/ClientLanguageContext';
-import { LoadJsonDBProvider, useLoadJsonDB } from './contexts/LoadJsonDBContext';
+import { LoadJsonDBProvider } from './contexts/LoadJsonDBContext';
+import Main from './components/Main';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <LoadJsonDBProvider>
         <>
           <Header />
+          <Main />
         </>
       </LoadJsonDBProvider>
     </ClientLanguageProvider>

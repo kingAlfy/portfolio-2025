@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-6 py-4">
+    <header className="container mx-auto px-6 py-4 ">
       {/* Versión Desktop */}
       <div className="hidden lg:flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
@@ -73,7 +73,7 @@ const Header = () => {
 
       {/* Menú móvil desplegable */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
+        <div className="lg:hidden container mx-auto px-6 py-4 absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
           <nav className="flex flex-col space-y-4 px-6">
             {resumeData.webSiteInfo.navOptions.map((option) => (
               <NavElement key={option.id} text={option.text} href={option.href} />
