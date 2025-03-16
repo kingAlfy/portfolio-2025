@@ -59,6 +59,68 @@
         "description": "DevOps Engineer con experiencia en despliegue de aplicaciones web, mantenimiento de servidores y automatización de procesos. Especializando en tecnologías como Docker, Git, CI/CD y monitoreo con Prometheus y Grafana. Siempre buscando mejorar y aprender nuevas tecnologías para optimizar procesos.",
         "positionSVG": "/src/assets/texts/Engineer.svg"
     },
+    "skills": {
+        "title": "My Skills",
+        "skillArray": [
+            {
+                "name": "Docker",
+                "svg": "/src/assets/icons/docker.svg"
+            },
+            {
+                "name": "Git",
+                "svg": "/src/assets/icons/git.svg"
+            },
+            {
+                "name": "GitLab",
+                "svg": "/src/assets/icons/gitlab.svg"
+            },
+            {
+                "name": "Spring Boot",
+                "svg": "/src/assets/icons/springboot.svg"
+            },
+            {
+                "name": "Java",
+                "svg": "/src/assets/icons/java.svg"
+            },
+            {
+                "name": "React",
+                "svg": "/src/assets/icons/react.svg"
+            },
+            {
+                "name": "Python",
+                "svg": "/src/assets/icons/python.svg"
+            },
+            {
+                "name": "Linux",
+                "svg": "/src/assets/icons/linux.svg"
+            },
+            {
+                "name": "Oracle DB",
+                "svg": "/src/assets/icons/oracle.svg"
+            },
+            {
+                "name": "Azure",
+                "svg": "/src/assets/icons/azure.svg"
+            },
+            {
+                "name": "Prometheus",
+                "svg": "/src/assets/icons/prometheus.svg"
+            },
+            {
+                "name": "Grafana",
+                "svg": "/src/assets/icons/grafana.svg"
+            },
+            {
+                "name": "Apache",
+                "svg": "/src/assets/icons/apache.svg"
+            },
+            {
+                "name": "Tomcat",
+                "svg": "/src/assets/icons/tomcat.svg"
+            }
+            
+        ]
+    },
     "education": [
         {
             "school": "IES Julián Marías",
