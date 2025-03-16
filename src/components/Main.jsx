@@ -1,6 +1,7 @@
 import { useClientLanguage } from '../contexts/ClientLanguageContext';
 import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 import SocialNetworkButton from './ui/SocialNetworkButton';
+
 const Main = () => {
 
     const { clientLanguage } = useClientLanguage();
@@ -9,6 +10,8 @@ const Main = () => {
     if (loading) {
         return <div>Loading...</div>;
     }
+    
+    
 
     console.log(resumeData.resume.currentPosition);
 
@@ -19,7 +22,7 @@ const Main = () => {
                     <header className="text-3xl font-regular leading-13">
                         {resumeData.main.greeting} <span className="font-extrabold">{resumeData.resume.name.split(' ')[0]}.</span>
                         <br />
-                        <span className="font-extrabold">{resumeData.resume.currentPosition[0]}</span> {resumeData.resume.currentPosition[1]}
+                        <span className="font-extrabold">{resumeData.resume.currentPosition[0]}</span> <img src={resumeData.main.positionSVG} alt="Engineer" className="inline-block h-[1.1em] w-auto align-text-bottom" />
                         <br />
                         {resumeData.main.basedIn} <span className="font-extrabold">{resumeData.main.basedIn && resumeData.resume.address.split(',')[1]+"."}</span>
                     </header>

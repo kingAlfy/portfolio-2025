@@ -56,7 +56,8 @@
     },
     "main": {
         "greeting": "¡Hola!, Soy",
-        "description": "DevOps Engineer con experiencia en despliegue de aplicaciones web, mantenimiento de servidores y automatización de procesos. Especializando en tecnologías como Docker, Git, CI/CD y monitoreo con Prometheus y Grafana. Siempre buscando mejorar y aprender nuevas tecnologías para optimizar procesos."
+        "description": "DevOps Engineer con experiencia en despliegue de aplicaciones web, mantenimiento de servidores y automatización de procesos. Especializando en tecnologías como Docker, Git, CI/CD y monitoreo con Prometheus y Grafana. Siempre buscando mejorar y aprender nuevas tecnologías para optimizar procesos.",
+        "positionSVG": "/src/assets/texts/Engineer.svg"
     },
     "education": [
         {
