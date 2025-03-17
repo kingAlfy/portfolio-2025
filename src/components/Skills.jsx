@@ -9,7 +9,7 @@ const Skills = () => {
     }
 
     return (
-        <section className="container mx-auto px-6 py-4">
+        <section >
             <header>
                 <h1 className="text-3xl mx-auto text-center m-5">{resumeData.skills.title.split(' ')[0]} <span className="font-extrabold">{resumeData.skills.title.split(' ')[1]}</span></h1>
             </header>

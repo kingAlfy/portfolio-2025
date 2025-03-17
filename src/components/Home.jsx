@@ -2,7 +2,7 @@ import { useClientLanguage } from '../contexts/ClientLanguageContext';
 import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 import SocialNetworkButton from './ui/SocialNetworkButton';
 
-const Main = () => {
+const Home = () => {
 
     const { clientLanguage } = useClientLanguage();
     const { resumeData, loading} = useLoadJsonDB();
@@ -16,7 +16,7 @@ const Main = () => {
     console.log(resumeData.resume.currentPosition);
 
     return (
-        <main className="container mx-auto px-6 py-4">
+        <section>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
 		        <div className="flex flex-col space-y-6">
                     <header className="text-3xl font-regular leading-13">
@@ -41,8 +41,8 @@ const Main = () => {
                     <img src="/src/assets/illustrations/persona_programando_mobile.svg" alt="Programador" className="object-cover w-full h-auto" />
                 </div>
             </div>
-        </main>
+        </section>
     )
 }
 
-export default Main;
+export default Home;
