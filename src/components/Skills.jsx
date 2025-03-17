@@ -1,5 +1,5 @@
 import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
-import SkillsCard from './ui/skillsCard';
+import SkillsCard from './ui/SkillsCard';
 
 const Skills = () => {
     const { resumeData, loading} = useLoadJsonDB();
@@ -11,7 +11,7 @@ const Skills = () => {
     return (
         <section >
             <header>
-                <h1 className="text-3xl mx-auto text-center m-5">{resumeData.skills.title.split(' ')[0]} <span className="font-extrabold">{resumeData.skills.title.split(' ')[1]}</span></h1>
+                <h2 className="text-3xl mx-auto text-center m-5">{resumeData.skills.title.split(' ')[0]} <span className="font-extrabold">{resumeData.skills.title.split(' ')[1]}</span></h2>
             </header>
 
             <ul className="grid grid-cols-2 gap-4 max-w-7xl mx-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-8">
