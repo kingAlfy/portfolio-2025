@@ -60,7 +60,7 @@
         "positionSVG": "/src/assets/texts/Engineer.svg"
     },
     "skills": {
-        "title": "My Skills",
+        "title": "Mis Habilidades",
         "skillArray": [
             {
                 "name": "Docker",
