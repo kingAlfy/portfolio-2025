@@ -3,6 +3,7 @@ import { ClientLanguageProvider } from './contexts/ClientLanguageContext';
 import { LoadJsonDBProvider } from './contexts/LoadJsonDBContext';
 import Home from './components/Home';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
       <LoadJsonDBProvider>
         <>
           <Header />
-          <main className='container mx-auto px-6 py-4'>
+          <main>
             <Home />
             <Skills />
+            <Experience />
           </main>
         </>
       </LoadJsonDBProvider>

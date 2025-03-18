@@ -121,7 +121,9 @@
             
         ]
     },
-    "education": [
+    "education": {
+        "title": "Mi Educación",
+        "educationArray": [
         {
             "school": "IES Julián Marías",
             "degree": "Grado Superior en Desarrollo de Aplicaciones Web"
@@ -135,24 +137,42 @@
             "degree": "Fundamentos de Azure",
             "type": "Certificación",
             "url": "https://www.credly.com/badges/190dfc14-a96b-4baa-88f2-59b77a42bd43/linked_in_profile"
-        }
-    ],
-    "experience": [
-        {
-            "company": "Astibot",
-            "position": "Software Engineer",
-            "description": "Desarrollo de aplicaciones web a medida para clientes públicos.",
-            "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
-            "startDate": "2020-01-01",
-            "endDate": "2024-01-01"
-        },
-        {
-            "company": "DivisaIT",
-            "position": "DevOps Engineer | Platform Engineer | Support Engineer",
-            "description": "Despliegue de aplicaciones web, mantenimiento, soporte técnico, etc. de servidores de la empresa y aquellos en los que se aloja el producto Proxia",
-            "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
-            "startDate": "2024-06-06",
-            "endDate": "Currently"
-        }
-    ]
+            }
+        ]
+    },
+    "experience": {
+        "title": "Mi Experiencia",
+        "experienceArray": [
+            {
+                "image": "/src/assets/icons/divisait.jpeg",
+                "company": "DivisaIT",
+                "position": "DevOps Engineer",
+                "description": "Despliegue de aplicaciones web, mantenimiento, soporte técnico, etc. de servidores de la empresa y aquellos en los que se aloja el producto Proxia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+                "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
+                "startDate": "2024-06-06",
+                "endDate": "Actualmente"
+            },
+            {
+                "image": "/src/assets/icons/astibot.jpeg",
+                "company": "Astibot",
+                "position": "Software Engineer",
+                "description": "Desarrollo de aplicaciones web a medida para clientes públicos.",
+                "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
+                "startDate": "2020-01-01",
+                "endDate": "2024-01-01",
+                "style": "special"
+            },
+            {
+                "image": "/src/assets/icons/accudeti.jpeg",
+                "company": "AccudeTI",
+                "position": "Técnico Onsite",
+                "description": "Soporte técnico en oficinas del cliente",
+                "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
+                "startDate": "2020-01-01",
+                "endDate": "2024-01-01"
+            }
+        ],
+        "seeLess": "Ver menos",
+        "seeMore": "Ver más"
+    }
 }

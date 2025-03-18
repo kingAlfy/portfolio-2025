@@ -16,7 +16,7 @@ const Home = () => {
     console.log(resumeData.resume.currentPosition);
 
     return (
-        <section>
+        <section className="container mx-auto px-6 py-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
 		        <div className="flex flex-col space-y-6">
                     <header className="text-3xl font-regular leading-13">
