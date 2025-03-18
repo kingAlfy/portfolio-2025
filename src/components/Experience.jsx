@@ -17,7 +17,7 @@ const Experience = () => {
             <div className="container mx-auto">
                 
                 {resumeData.experience.experienceArray.map((experience) => (
-                        <ExperienceCard key={experience.company} {...experience} />
+                        <ExperienceCard key={experience.company} {...experience} seeLess={resumeData.experience.seeLess} seeMore={resumeData.experience.seeMore} />
                     ))}
             </div>
         </section>

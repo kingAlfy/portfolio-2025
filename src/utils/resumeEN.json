@@ -146,21 +146,35 @@
         "title": "My Experience",
         "experienceArray": [
             {
+                "image": "/src/assets/icons/divisait.jpeg",
+                "company": "DivisaIT",
+                "position": "DevOps Engineer",
+                "description": "Web application deployment, server maintenance, technical support, etc. of company servers and those hosting the Proxia product.",
+                "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
+                "startDate": "2024-06-06",
+                "endDate": "Currently"
+            },
+            {
+                "image": "/src/assets/icons/astibot.jpeg",
                 "company": "Astibot",
                 "position": "Software Engineer",
                 "description": "Development of web applications tailored to public clients.",
                 "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
                 "startDate": "2020-01-01",
-                "endDate": "2024-01-01"
+                "endDate": "2024-01-01",
+                "style": "special"
             },
             {
-                "company": "DivisaIT",
-                "position": "DevOps Engineer | Platform Engineer | Support Engineer",
-                "description": "Web application deployment, server maintenance, technical support, etc. of company servers and those hosting the Proxia product.",
-                "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
-                "startDate": "2024-06-06",
-                "endDate": "Currently"
+                "image": "/src/assets/icons/accudeti.jpeg",
+                "company": "AccudeTI",
+                "position": "Onsite Technician",
+                "description": "Technical support in customer offices",
+                "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
+                "startDate": "2020-01-01",
+                "endDate": "2024-01-01"
             }
-        ]
+        ],
+        "seeLess": "See less",
+        "seeMore": "See more"
     }
 }

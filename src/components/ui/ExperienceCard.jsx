@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const ExperienceCard = ({ 
   image, 
@@ -6,11 +6,26 @@ const ExperienceCard = ({
   company, 
   startDate, 
   endDate, 
-  description 
+  description,
+  style,
+  seeLess,
+  seeMore
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const textRef = useRef(null);
+  
+  useEffect(() => {
+    // Comprobar si el texto es lo suficientemente largo para necesitar el botón
+    if (textRef.current) {
+      const isOverflowing = textRef.current.scrollHeight > 80; // altura máxima inicial
+      setShowButton(isOverflowing);
+    }
+  }, [description]);
+
   return (
-    <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
-      <header className="flex items-center justify-between mb-4">
+    <article className={style === "special" ? "rounded-lg shadow-md p-6 mb-6 bg-special" : "border-terciary border-1 rounded-lg p-6 mb-6"}>
+      <header className="flex items-center justify-between mb-4 flex-wrap gap-4">
         <div className="flex items-center gap-4">
           {image && (
             <div className="w-12 h-12 rounded-sm overflow-hidden flex-shrink-0">
@@ -23,10 +38,10 @@ const ExperienceCard = ({
           )}
           <div>
             <h3 className="text-lg font-bold">{position}</h3>
-            <p className="text-gray-600 dark:text-gray-300">{company}</p>
+            <p className="text-primary">{company}</p>
           </div>
         </div>
-        <div className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="text-sm text-quaternary">
           <span>{startDate}</span>
           {endDate && (
             <>
@@ -38,7 +53,21 @@ const ExperienceCard = ({
         </div>
       </header>
       <div className="mt-2">
-        <p className="text-gray-700 dark:text-gray-300">{description}</p>
+        <div 
+          ref={textRef}
+          className={`text-quaternary overflow-hidden transition-all duration-300 ${isExpanded ? '' : 'max-h-20'}`}
+        >
+          <p>{description}</p>
+        </div>
+        
+        {showButton && (
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)} 
+            className="text-primary w-full text-center text-sm mt-2 hover:underline focus:outline-none"
+          >
+            {isExpanded ? seeLess : seeMore}
+          </button>
+        )}
       </div>
     </article>
   );

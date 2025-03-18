@@ -146,11 +146,11 @@
             {
                 "image": "/src/assets/icons/divisait.jpeg",
                 "company": "DivisaIT",
-                "position": "DevOps Engineer | Platform Engineer | Support Engineer",
-                "description": "Despliegue de aplicaciones web, mantenimiento, soporte técnico, etc. de servidores de la empresa y aquellos en los que se aloja el producto Proxia",
+                "position": "DevOps Engineer",
+                "description": "Despliegue de aplicaciones web, mantenimiento, soporte técnico, etc. de servidores de la empresa y aquellos en los que se aloja el producto Proxia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
                 "stack": [ "Linux", "Docker", "Git", "GitLab CI/CD", "Prometheus", "Grafana", "Apache", "Oracle Database", "GitOps", "Nexus", "Tomcat", "SonarQube" ],
                 "startDate": "2024-06-06",
-                "endDate": "Currently"
+                "endDate": "Actualmente"
             },
             {
                 "image": "/src/assets/icons/astibot.jpeg",
@@ -159,8 +159,20 @@
                 "description": "Desarrollo de aplicaciones web a medida para clientes públicos.",
                 "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
                 "startDate": "2020-01-01",
+                "endDate": "2024-01-01",
+                "style": "special"
+            },
+            {
+                "image": "/src/assets/icons/accudeti.jpeg",
+                "company": "AccudeTI",
+                "position": "Técnico Onsite",
+                "description": "Soporte técnico en oficinas del cliente",
+                "stack": [ "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Laravel" ],
+                "startDate": "2020-01-01",
                 "endDate": "2024-01-01"
             }
-        ]
+        ],
+        "seeLess": "Ver menos",
+        "seeMore": "Ver más"
     }
 }
