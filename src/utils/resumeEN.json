@@ -179,5 +179,22 @@
         ],
         "seeLess": "See less",
         "seeMore": "See more"
+    },
+    "faqs": {
+        "title": "FAQs",
+        "faqsArray": [
+            {
+                "question": "What is your name?",
+                "answer": "My name is Alfonso Ravelo Gil."
+            },
+            {
+                "question": "Are you a developer?",
+                "answer": "No, I am a DevOps Engineer."
+            },
+            {
+                "question": "What are your main responsibilities currently?",
+                "answer": "Currently, I am responsible for working in the company's infrastructure, as well as automating processes and implementing new technologies."
+            }
+        ]
     }
 }
