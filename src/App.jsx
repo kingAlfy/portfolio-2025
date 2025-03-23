@@ -4,6 +4,7 @@ import { LoadJsonDBProvider } from './contexts/LoadJsonDBContext';
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Education from './components/Education';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Home />
             <Skills />
             <Experience />
+            <Education />
           </main>
         </>
       </LoadJsonDBProvider>

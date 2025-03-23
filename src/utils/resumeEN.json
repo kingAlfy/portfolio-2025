@@ -128,17 +128,20 @@
         "educationArray": [
             {
                 "school": "IES Julián Marías",
-                "degree": "Associate Degree in Application WebDevelopment"
+                "degree": "Associate Degree in Application WebDevelopment",
+                "endDate": "2020"
             },
             {
                 "school": "IES Galileo",
-                "degree": "Associate Degree in Microcomputer Systems and Networks"
+                "degree": "Associate Degree in Microcomputer Systems and Networks",
+                "endDate": "2020"
             },
             {
                 "school": "Microsoft",
                 "degree": "Azure Fundamentals",
                 "type": "Certification",
-                "url": "https://www.credly.com/badges/190dfc14-a96b-4baa-88f2-59b77a42bd43/linked_in_profile"
+                "url": "https://www.credly.com/badges/190dfc14-a96b-4baa-88f2-59b77a42bd43/linked_in_profile",
+                "endDate": "2020"
             }
         ]
     },
