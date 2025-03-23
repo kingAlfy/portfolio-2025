@@ -14,7 +14,7 @@ const Experience = () => {
             <header>
                     <SectionTitle title={resumeData.experience.title} />
             </header>
-            <div className="container mx-auto">
+            <div className="container mx-auto max-w-7xl">
                 
                 {resumeData.experience.experienceArray.map((experience) => (
                         <ExperienceCard key={experience.company} {...experience} seeLess={resumeData.experience.seeLess} seeMore={resumeData.experience.seeMore} />
