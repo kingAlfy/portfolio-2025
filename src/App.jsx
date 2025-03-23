@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
-
+import Faqs from './components/Faqs';
 function App() {
 
   return (
@@ -18,6 +18,7 @@ function App() {
             <Skills />
             <Experience />
             <Education />
+            <Faqs />
           </main>
         </>
       </LoadJsonDBProvider>

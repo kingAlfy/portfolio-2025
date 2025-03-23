@@ -177,5 +177,22 @@
         ],
         "seeLess": "Ver menos",
         "seeMore": "Ver más"
+    },
+    "faqs": {
+        "title": "Preguntas Frecuentes",
+        "faqsArray": [
+            {
+                "question": "¿Qué es tu nombre?",
+                "answer": "Mi nombre es Alfonso Ravelo Gil."
+            },
+            {
+                "question": "¿Eres desarrollador?",
+                "answer": "No, soy un Ingeniero de Operaciones."
+            },  
+            {
+                "question": "¿Cuáles son tus principales responsabilidades actualmente?",
+                "answer": "Actualmente me encargo principalmente de trabajar en la infraestructura de la empresa, así como de la automatización de procesos y la implementación de nuevas tecnologías."
+            }
+        ]
     }
 }
