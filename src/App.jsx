@@ -7,7 +7,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Faqs from './components/Faqs';
 import Contact from './components/Contact';
-
+import Footer from './components/Footer';
 function App() {
 
   return (
@@ -23,6 +23,7 @@ function App() {
             <Faqs />
             <Contact />
           </main>
+          <Footer />
         </>
       </LoadJsonDBProvider>
     </ClientLanguageProvider>
