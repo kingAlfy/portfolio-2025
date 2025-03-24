@@ -10,7 +10,7 @@ const Skills = () => {
     }
 
     return (
-        <section className="container mx-auto px-6 py-4">
+        <section id={resumeData.webSiteInfo.navOptions.find(option => option.id === 'skills').href.substring(1)} className="container mx-auto px-6 py-4">
             <header>
                 <SectionTitle title={resumeData.skills.title} />
             </header>

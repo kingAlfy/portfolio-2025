@@ -8,17 +8,17 @@
             {
                 "id": "skills",
                 "text": "Habilidades",
-                "href": "#skills"
+                "href": "#habilidades"
             },
             {
                 "id": "experience", 
                 "text": "Experiencia",
-                "href": "#experience"
+                "href": "#experiencia"
             },
             {
                 "id": "education",
                 "text": "Educación", 
-                "href": "#education"
+                "href": "#educacion"
             },
             {
                 "id": "faqs",
@@ -28,7 +28,7 @@
             {
                 "id": "contact",
                 "text": "Contacto",
-                "href": "#contact"
+                "href": "#contacto"
             }
         ],
         "downloadButton": {
