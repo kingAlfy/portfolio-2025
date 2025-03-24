@@ -48,9 +48,9 @@ const Header = () => {
 
       {/* Versión Móvil */}
       <div className="lg:hidden flex justify-between items-center">
-        <div className="text-xl font-bold">
+        <a href="/" className="text-xl font-bold">
           {resumeData.webSiteInfo.brandingTitle}
-        </div>
+        </a>
         <button 
           onClick={toggleMenu}
           className="p-2"
