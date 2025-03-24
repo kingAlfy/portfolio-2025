@@ -2,6 +2,7 @@ import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 import SectionTitle from './ui/SectionTitle';
 import { useState } from 'react';
 import SocialNetworkButton from './ui/SocialNetworkButton';
+
 const Contact = () => {
     const { resumeData, loading } = useLoadJsonDB();
     const [formData, setFormData] = useState({
@@ -27,17 +28,13 @@ const Contact = () => {
         setIsSubmitting(true);
         
         try {
-            // Aquí puedes integrar con servicios como EmailJS, Formspree, etc.
-            // Ejemplo con EmailJS:
-            // await emailjs.send('service_id', 'template_id', formData, 'user_id');
-            
             // Simulación de envío exitoso
             await new Promise(resolve => setTimeout(resolve, 1000));
             
-            setSubmitStatus({ success: true, message: 'Mensaje enviado correctamente' });
+            setSubmitStatus({ success: true, message: resumeData.contact.success });
             setFormData({ name: '', email: '', subject: '', message: '' });
         } catch (error) {
-            setSubmitStatus({ success: false, message: 'Error al enviar el mensaje' });
+            setSubmitStatus({ success: false, message: resumeData.contact.error });
         } finally {
             setIsSubmitting(false);
         }
@@ -49,15 +46,15 @@ const Contact = () => {
                 <SectionTitle title={resumeData.contact.title} />
             </header>
             
-            <div className="container mx-auto flex flex-col md:flex-row gap-8 max-w-7xl ">
+            <div className="container mx-auto flex flex-col md:flex-row gap-8 max-w-7xl">
                 {/* Formulario y enlaces sociales */}
                 <div className="w-full">
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
-                        {/* Formulario (ocupa 4 columnas en desktop) */}
+                        {/* Formulario */}
                         <div className="md:col-span-4 w-full">
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-tertiary mb-1">Nombre</label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.name}</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -70,7 +67,7 @@ const Contact = () => {
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-tertiary mb-1">Email</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.email}</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -83,7 +80,7 @@ const Contact = () => {
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-medium text-tertiary mb-1">Asunto</label>
+                                    <label htmlFor="subject" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.subject}</label>
                                     <input
                                         type="text"
                                         id="subject"
@@ -96,7 +93,7 @@ const Contact = () => {
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-tertiary mb-1">Mensaje</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.message}</label>
                                     <textarea
                                         id="message"
                                         name="message"
@@ -114,18 +111,16 @@ const Contact = () => {
                                         disabled={isSubmitting}
                                         className="w-full md:w-auto px-4 py-2 bg-black text-white font-medium rounded-sm hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-tertiary disabled:opacity-50"
                                     >
-                                        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                        {isSubmitting ? resumeData.contact.sending : resumeData.contact.form.send}
                                     </button>
 
-                                    
-                                        {resumeData.webSiteInfo.socialLinks.map((socialLink, index) => (
-                                            <SocialNetworkButton 
-                                                key={index} 
-                                                icon={socialLink.icon} 
-                                                url={socialLink.url} 
-                                            />
-                                        ))}
-                                    
+                                    {resumeData.webSiteInfo.socialLinks.map((socialLink, index) => (
+                                        <SocialNetworkButton 
+                                            key={index} 
+                                            icon={socialLink.icon} 
+                                            url={socialLink.url} 
+                                        />
+                                    ))}
                                 </div>
                                 
                                 {submitStatus && (
@@ -142,7 +137,7 @@ const Contact = () => {
                 <div className="w-full">
                     <div className="bg-white border-2 border-black rounded-lg p-6 h-full flex flex-col">
                         <div className="mb-8">
-                            <h3 className="text-lg font-medium mb-2 text-tertiary">Email</h3>
+                            <h3 className="text-lg font-medium mb-2 text-tertiary">{resumeData.contact.form.email}</h3>
                             <a 
                                 href={`mailto:${resumeData.resume.email}`} 
                                 className="text-black hover:text-tertiary transition-colors"
@@ -152,7 +147,7 @@ const Contact = () => {
                         </div>
                         
                         <div className="flex-grow">
-                            <h3 className="text-lg font-medium mb-2 text-tertiary">Ubicación</h3>
+                            <h3 className="text-lg font-medium mb-2 text-tertiary">{resumeData.contact.locationLabel}</h3>
                             <p className="text-black mb-4">{resumeData.resume.address}</p>
                             
                             {/* Mapa de Google Maps */}
