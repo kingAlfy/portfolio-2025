@@ -1,0 +1,178 @@
+import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
+import SectionTitle from './ui/SectionTitle';
+import { useState } from 'react';
+import SocialNetworkButton from './ui/SocialNetworkButton';
+const Contact = () => {
+    const { resumeData, loading } = useLoadJsonDB();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        
+        try {
+            // Aquí puedes integrar con servicios como EmailJS, Formspree, etc.
+            // Ejemplo con EmailJS:
+            // await emailjs.send('service_id', 'template_id', formData, 'user_id');
+            
+            // Simulación de envío exitoso
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            setSubmitStatus({ success: true, message: 'Mensaje enviado correctamente' });
+            setFormData({ name: '', email: '', subject: '', message: '' });
+        } catch (error) {
+            setSubmitStatus({ success: false, message: 'Error al enviar el mensaje' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    return (
+        <section id="contact" className="container mx-auto px-6 py-4">
+            <header>
+                <SectionTitle title={resumeData.contact.title} />
+            </header>
+            
+            <div className="container mx-auto flex flex-col md:flex-row gap-8 max-w-7xl ">
+                {/* Formulario y enlaces sociales */}
+                <div className="w-full">
+                    <div className="flex flex-col md:flex-row gap-6 justify-center">
+                        {/* Formulario (ocupa 4 columnas en desktop) */}
+                        <div className="md:col-span-4 w-full">
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-tertiary mb-1">Nombre</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-tertiary mb-1">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="subject" className="block text-sm font-medium text-tertiary mb-1">Asunto</label>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-tertiary mb-1">Mensaje</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows="5"
+                                        className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
+                                    ></textarea>
+                                </div>
+
+                                <div className="flex flex-row flex-wrap gap-4 md:flex-nowrap">
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full md:w-auto px-4 py-2 bg-black text-white font-medium rounded-sm hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-tertiary disabled:opacity-50"
+                                    >
+                                        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                    </button>
+
+                                    
+                                        {resumeData.webSiteInfo.socialLinks.map((socialLink, index) => (
+                                            <SocialNetworkButton 
+                                                key={index} 
+                                                icon={socialLink.icon} 
+                                                url={socialLink.url} 
+                                            />
+                                        ))}
+                                    
+                                </div>
+                                
+                                {submitStatus && (
+                                    <div className={`mt-4 p-3 rounded-md border ${submitStatus.success ? 'bg-green-100 text-green-800 border-green-800' : 'bg-red-100 text-red-800 border-red-800'}`}>
+                                        {submitStatus.message}
+                                    </div>
+                                )}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Información de contacto y mapa */}
+                <div className="w-full">
+                    <div className="bg-white border-2 border-black rounded-lg p-6 h-full flex flex-col">
+                        <div className="mb-8">
+                            <h3 className="text-lg font-medium mb-2 text-tertiary">Email</h3>
+                            <a 
+                                href={`mailto:${resumeData.resume.email}`} 
+                                className="text-black hover:text-tertiary transition-colors"
+                            >
+                                {resumeData.resume.email}
+                            </a>
+                        </div>
+                        
+                        <div className="flex-grow">
+                            <h3 className="text-lg font-medium mb-2 text-tertiary">Ubicación</h3>
+                            <p className="text-black mb-4">{resumeData.resume.address}</p>
+                            
+                            {/* Mapa de Google Maps */}
+                            <div className="w-full h-64 rounded-md overflow-hidden border-2 border-black">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11946.698558344383!2d-4.7372!3d41.6372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd476cde13c9ea19%3A0xc54421ea5d124aff!2sDelicias%2C%20Valladolid!5e0!3m2!1ses!2ses!4v1623456789012!5m2!1ses!2ses" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0 }} 
+                                    allowFullScreen="" 
+                                    loading="lazy"
+                                    title="Ubicación en Delicias, Valladolid"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Contact; 

@@ -196,5 +196,8 @@
                 "answer": "Currently, I am responsible for working in the company's infrastructure, as well as automating processes and implementing new technologies."
             }
         ]
+    },
+    "contact": {
+        "title": "Contact"
     }
 }
