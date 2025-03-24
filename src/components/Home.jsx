@@ -32,8 +32,13 @@ const Home = () => {
                         </p>
                     </section>
                     <footer className="flex space-x-4">
-                        <SocialNetworkButton icon={resumeData.webSiteInfo.socialLinks[0].icon} url={resumeData.webSiteInfo.socialLinks[0].url} />
-                        <SocialNetworkButton icon={resumeData.webSiteInfo.socialLinks[1].icon} url={resumeData.webSiteInfo.socialLinks[1].url} />
+                        {resumeData.webSiteInfo.socialLinks.map((socialLink, index) => (
+                            <SocialNetworkButton 
+                                key={index} 
+                                icon={socialLink.icon} 
+                                url={socialLink.url} 
+                            />
+                        ))}
                     </footer>
                 </div>
 
