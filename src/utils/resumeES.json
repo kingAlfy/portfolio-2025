@@ -16,14 +16,14 @@
                 "href": "#experience"
             },
             {
-                "id": "about-me",
-                "text": "Sobre mí",
-                "href": "#about-me"
-            },
-            {
                 "id": "education",
                 "text": "Educación", 
                 "href": "#education"
+            },
+            {
+                "id": "faqs",
+                "text": "FAQs",
+                "href": "#faqs"
             },
             {
                 "id": "contact",

@@ -17,14 +17,14 @@
                 "href": "#experience"
             },
             {
-                "id": "about-me",
-                "text": "About Me",
-                "href": "#about-me"
-            },
-            {
                 "id": "education",
                 "text": "Education",
                 "href": "#education"
+            },
+            {
+                "id": "faqs",
+                "text": "FAQs",
+                "href": "#faqs"
             },
             {
                 "id": "contact",
