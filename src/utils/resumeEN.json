@@ -198,6 +198,17 @@
         ]
     },
     "contact": {
-        "title": "Contact"
+        "title": "Contact",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send message"
+        },
+        "success": "Message sent successfully",
+        "error": "Error sending message",
+        "sending": "Sending...",
+        "locationLabel": "Location"
     }
 }
