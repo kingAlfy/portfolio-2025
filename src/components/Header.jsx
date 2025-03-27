@@ -74,12 +74,12 @@ const Header = () => {
       {/* Menú móvil desplegable */}
       {isMenuOpen && (
         <div className="lg:hidden container mx-auto px-6 py-4 absolute top-16 left-0 right-0 bg-primary shadow-md py-4">
-          <nav className="flex flex-col space-y-4 px-6">
+          <nav className="flex flex-col space-y-4">
             {resumeData.webSiteInfo.navOptions.map((option) => (
               <NavElement key={option.id} text={option.text} href={option.href} />
             ))}
           </nav>
-          <div className="flex flex-col space-y-2 px-6 mt-4">
+          <div className="flex flex-col space-y-2 mt-4">
             <Button>
               <div className="flex items-center justify-center gap-2">
                 {resumeData.webSiteInfo.downloadButton.text}
