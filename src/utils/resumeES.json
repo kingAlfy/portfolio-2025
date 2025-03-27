@@ -202,11 +202,12 @@
             "email": "Correo electrónico",
             "subject": "Asunto",
             "message": "Mensaje",
-            "send": "Enviar mensaje"
+            "send": "Enviar mensaje",
+            "maxLengthName": "caracteres"
         },
         "success": "Mensaje enviado correctamente",
         "error": "Error al enviar el mensaje",
         "sending": "Enviando...",
-        "locationLabel": "Ubicación"
+        "locationLabel": "Ubicación"   
     }
 }

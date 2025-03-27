@@ -2,7 +2,7 @@ import { useLoadJsonDB } from '../contexts/LoadJsonDBContext';
 import SectionTitle from './ui/SectionTitle';
 import { useState } from 'react';
 import SocialNetworkButton from './ui/SocialNetworkButton';
-
+import Button from './ui/Button';
 const Contact = () => {
     const { resumeData, loading } = useLoadJsonDB();
     const [formData, setFormData] = useState({
@@ -54,7 +54,12 @@ const Contact = () => {
                         <div className="md:col-span-4 w-full">
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.name}</label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-tertiary mb-1">
+                                        {resumeData.contact.form.name} 
+                                        <span className="text-xs text-gray-500 ml-1">
+                                            (máx. 50 {resumeData.contact.form.maxLengthName})
+                                        </span>
+                                    </label>
                                     <input
                                         type="text"
                                         id="name"
@@ -62,12 +67,21 @@ const Contact = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
+                                        maxLength={50}
                                         className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
                                     />
+                                    <div className="text-xs text-right mt-1 text-gray-500">
+                                        {formData.name.length}/50
+                                    </div>
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.email}</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-tertiary mb-1">
+                                        {resumeData.contact.form.email}
+                                        <span className="text-xs text-gray-500 ml-1">
+                                            (máx. 60 {resumeData.contact.form.maxLengthName})
+                                        </span>
+                                    </label>
                                     <input
                                         type="email"
                                         id="email"
@@ -75,12 +89,21 @@ const Contact = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
+                                        maxLength={60}
                                         className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
                                     />
+                                    <div className="text-xs text-right mt-1 text-gray-500">
+                                        {formData.email.length}/60
+                                    </div>
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.subject}</label>
+                                    <label htmlFor="subject" className="block text-sm font-medium text-tertiary mb-1">
+                                        {resumeData.contact.form.subject}
+                                        <span className="text-xs text-gray-500 ml-1">
+                                            (máx. 120 {resumeData.contact.form.maxLengthName})
+                                        </span>
+                                    </label>
                                     <input
                                         type="text"
                                         id="subject"
@@ -88,31 +111,43 @@ const Contact = () => {
                                         value={formData.subject}
                                         onChange={handleChange}
                                         required
+                                        maxLength={120}
                                         className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
                                     />
+                                    <div className="text-xs text-right mt-1 text-gray-500">
+                                        {formData.subject.length}/120
+                                    </div>
                                 </div>
                                 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-tertiary mb-1">{resumeData.contact.form.message}</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-tertiary mb-1">
+                                        {resumeData.contact.form.message}
+                                        <span className="text-xs text-gray-500 ml-1">
+                                            (máx. 1800 {resumeData.contact.form.maxLengthMessage})
+                                        </span>
+                                    </label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
+                                        maxLength={1800}
                                         rows="5"
                                         className="w-full px-4 py-2 bg-white text-black border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-tertiary"
                                     ></textarea>
+                                    <div className="text-xs text-right mt-1 text-gray-500">
+                                        {formData.message.length}/1800
+                                    </div>
                                 </div>
 
                                 <div className="flex flex-row flex-wrap gap-4 md:flex-nowrap">
-                                    <button
+                                    <Button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full md:w-auto px-4 py-2 bg-black text-white font-medium rounded-sm hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-tertiary disabled:opacity-50"
                                     >
                                         {isSubmitting ? resumeData.contact.sending : resumeData.contact.form.send}
-                                    </button>
+                                    </Button>
 
                                     {resumeData.webSiteInfo.socialLinks.map((socialLink, index) => (
                                         <SocialNetworkButton 

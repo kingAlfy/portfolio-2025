@@ -204,7 +204,8 @@
             "email": "Email",
             "subject": "Subject",
             "message": "Message",
-            "send": "Send message"
+            "send": "Send message",
+            "maxLengthName": "characters"
         },
         "success": "Message sent successfully",
         "error": "Error sending message",
